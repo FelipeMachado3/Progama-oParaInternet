@@ -2,13 +2,24 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog dos Caneludos</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- ════ HEADER ════ -->
   <header>
-    <img src="logo_caneludos_v2.svg" alt="Logo Blog dos Caneludos">
+    <a href="index.html" class="logo-area">
+      <div class="logo-text">
+        <span class="top">Blog dos Caneludos</span>
+        <span class="sub">Futebol do jeito certo</span>
+      </div>
+    </a>
     <nav>
       <ul>
         <li><a href="index.html">Início</a></li>
@@ -18,31 +29,40 @@
     </nav>
   </header>
 
-  <hr>
-  <h2>Notícias do mundo do futebol de uma forma que você nunca viu!</h2>
-  <hr>
+  <!-- ════ HERO ════ -->
+  <section class="hero">
+    <div class="hero-tag">⚡ Novidades do mundo da bola</div>
+    <h1>Notícias do futebol<br><span>do jeito que você nunca viu</span></h1>
+    <p class="sub">Informação, humor e a paixão que todo torcedor tem pelo jogo.</p>
+  </section>
 
-  <!-- MENU DE CATEGORIAS -->
-  <nav>
-    <p>MENU</p>
-    <ul>
-      <li>Futebol BR.
+  <!-- ════ CONTAINER (SIDEBAR + MAIN) ════ -->
+  <div class="container">
+
+    <!-- ── SIDEBAR / MENU DE CATEGORIAS ── -->
+    <aside>
+      <p class="menu-label">📋 Categorias</p>
+
+      <div class="menu-category">
+        <p class="cat-title">Futebol BR</p>
         <ul>
           <li><a href="brasileirao.html">Brasileirão</a></li>
           <li><a href="cdb.html">Copa do Brasil</a></li>
           <li><a href="SerieB.html">Brasileirão Série B</a></li>
           <li><a href="Estaduais.html">Estaduais</a></li>
         </ul>
-      </li>
+      </div>
 
-      <li>Futebol Sul-americano.
+      <div class="menu-category">
+        <p class="cat-title">Futebol Sul-americano</p>
         <ul>
           <li><a href="liberta.html">Copa Libertadores</a></li>
           <li><a href="sula.html">Copa Sul-Americana</a></li>
         </ul>
-      </li>
+      </div>
 
-      <li>Futebol Mundial.
+      <div class="menu-category">
+        <p class="cat-title">Futebol Mundial</p>
         <ul>
           <li><a href="uefaCL.html">Champions League</a></li>
           <li><a href="uefaEL.html">Europa League</a></li>
@@ -50,40 +70,86 @@
           <li><a href="Laliga.html">La Liga</a></li>
           <li><a href="SeriaA.html">Serie A</a></li>
         </ul>
-      </li>
+      </div>
 
-      <li>Mercado da Bola.
+      <div class="menu-category">
+        <p class="cat-title">Mercado da Bola</p>
         <ul>
           <li><a href="mercado.html">Mercado de Transferências</a></li>
         </ul>
-      </li>
-    </ul>
-  </nav>
+      </div>
+    </aside>
 
-  <!-- CONTEÚDO -->
-  <p>Nossa proposta.</p>
-  <p>
-    Montamos este blog porque acreditamos que o futebol — seja masculino ou feminino — 
-    merece ser falado, debatido e celebrado de uma forma leve e envolvente. Nosso objetivo 
-    é trazer notícias, análises, curiosidades e opiniões sobre o mundo da bola em uma 
-    linguagem descontraída, aproximando o torcedor da informação. ⚽
+    <!-- ── CONTEÚDO PRINCIPAL ── -->
+    <main>
 
-    Inspirados pelo estilo autêntico e irreverente de programas como o De Sola e pela forma 
-    moderna e dinâmica de produzir conteúdo da CazéTV, queremos criar um espaço onde o 
-    futebol seja discutido com informação, humor e a paixão que todo torcedor tem pelo jogo.
-  </p>
+      <!-- Nossa Proposta -->
+      <p class="section-label">🏠 Nossa Proposta</p>
+      <div class="proposta-card">
+        <h2>Por que o Blog dos Caneludos?</h2>
+        <p>
+          Montamos este blog porque acreditamos que o futebol
+          merece ser falado, debatido e celebrado de uma forma <strong>leve e envolvente</strong>.
+          Nosso objetivo é trazer notícias, análises, curiosidades e opiniões sobre o mundo
+          da bola em uma linguagem descontraída, aproximando o torcedor da informação. ⚽
+        </p>
+        <p style="margin-top: 0.75rem;">
+          Inspirados pelo estilo autêntico e irreverente do <strong>De Sola</strong> e pela
+          forma moderna e dinâmica da <strong>CazéTV</strong>, queremos criar um espaço onde
+          o futebol seja discutido com informação, humor e a paixão que todo torcedor tem pelo jogo.
+        </p>
+      </div>
 
+      <!-- Destaques -->
+      <p class="section-label">🔥 Destaques</p>
+      <div class="destaques-grid">
+
+        <a href="brasileirao.html" class="card">
+          <p class="card-cat">Brasileirão</p>
+          <h3>Rodada a rodada: quem lidera a tabela?</h3>
+          <p>Acompanhe os resultados e a classificação atualizada do Campeonato Brasileiro.</p>
+          <p class="card-meta">Atualizado hoje</p>
+        </a>
+
+        <a href="liberta.html" class="card">
+          <p class="card-cat">Copa Libertadores</p>
+          <h3>A briga dos brasileiros na América</h3>
+          <p>Veja como estão os clubes do Brasil na principal competição continental.</p>
+          <p class="card-meta">Atualizado hoje</p>
+        </a>
+
+        <a href="uefaCL.html" class="card">
+          <p class="card-cat">Champions League</p>
+          <h3>Europa em chamas: quem vai à final?</h3>
+          <p>As semifinais se aproximam e a briga pelo título europeu esquenta.</p>
+          <p class="card-meta">Atualizado hoje</p>
+        </a>
+
+        <a href="mercado.html" class="card">
+          <p class="card-cat">Mercado da Bola</p>
+          <h3>As transferências que vão bombar em 2026</h3>
+          <p>Rumores, confirmações e tudo o que rola no mercado de transferências.</p>
+          <p class="card-meta">Atualizado hoje</p>
+        </a>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- ════ FOOTER ════ -->
   <footer>
-
-  <p>Links úteis:</p>
-  <ul>
-    <li><a href="https://ge.globo.com/" target="_blank">GE Globo</a></li>
-    <li><a href="https://cazétv.com.br/" target="_blank">CazéTV</a></li>
-  </ul>
-
-  <p>&copy; 2026 Blog dos Caneludos. Todos os direitos reservados.</p>
-</footer>
-
+    <div class="footer-inner">
+      <div>
+        <p class="footer-links-label">Links úteis</p>
+        <ul class="footer-links">
+          <li><a href="https://ge.globo.com/" target="_blank">GE Globo</a></li>
+          <li><a href="https://cazétv.com.br/" target="_blank">CazéTV</a></li>
+        </ul>
+      </div>
+      <p class="footer-copy">&copy; 2026 Blog dos Caneludos.<br>Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
