@@ -3,16 +3,16 @@
    ================================================ */
 
 :root {
-  --green:      #00c853;
-  --green-dark: #007c32;
+  --green:      #00b341;
+  --green-dark: #007c2a;
   --yellow:     #ffe600;
-  --black:      #0a0a0a;
-  --dark:       #111111;
-  --gray:       #1c1c1c;
-  --gray-mid:   #2e2e2e;
-  --text:       #e8e8e8;
-  --text-muted: #888;
-  --accent:     #ff3c3c;
+  --black:      #ffffff;
+  --dark:       #f2f2f2;
+  --gray:       #111111;
+  --gray-mid:   #333333;
+  --text:       #111111;
+  --text-muted: #444444;
+  --accent:     #e8000d;
 }
 
 /* ── RESET ── */
@@ -126,8 +126,8 @@ header nav ul li a:hover { color: var(--green); border-color: var(--green); }
   letter-spacing: 4px;
   text-transform: uppercase;
   color: var(--green);
-  background: rgba(0,200,83,0.1);
-  border: 1px solid rgba(0,200,83,0.3);
+  background: rgba(0,179,65,0.1);
+  border: 1px solid rgba(0,179,65,0.3);
   padding: 0.3rem 1rem;
   border-radius: 2px;
   margin-bottom: 1.25rem;
@@ -197,11 +197,21 @@ aside {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--text-muted);
-  padding: 0.4rem 0;
+  padding: 0.4rem 0.5rem 0.4rem 0;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  cursor: default;
+  cursor: pointer;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  border-radius: 2px;
+  transition: color 0.15s, background 0.15s;
+}
+.menu-category > .cat-title:hover {
+  color: var(--green);
+  background: rgba(0,179,65,0.07);
 }
 .menu-category > .cat-title::before {
   content: '';
@@ -210,6 +220,24 @@ aside {
   background: var(--yellow);
   clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
   flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.menu-category > .cat-title[aria-expanded="true"] {
+  color: var(--green);
+}
+.menu-category > .cat-title[aria-expanded="true"]::before {
+  background: var(--green);
+  transform: rotate(180deg);
+}
+
+/* Animação suave ao abrir */
+.cat-links {
+  overflow: hidden;
+  animation: slideDown 0.2s ease;
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .menu-category ul {
@@ -241,7 +269,7 @@ aside {
 }
 .menu-category ul li a:hover {
   color: var(--green);
-  background: rgba(0,200,83,0.07);
+  background: rgba(0,179,65,0.07);
 }
 .menu-category ul li a:hover::before { background: var(--green); }
 
@@ -333,7 +361,7 @@ main {}
 .card-meta {
   margin-top: 1rem;
   font-size: 0.75rem;
-  color: #555;
+  color: var(--text-muted);
   font-style: italic;
 }
 
@@ -342,8 +370,8 @@ main {}
    ════════════════════════════════════════ */
 footer {
   margin-top: 4rem;
-  background: var(--dark);
-  border-top: 3px solid var(--gray-mid);
+  background: var(--gray);
+  border-top: 3px solid var(--green);
   padding: 2.5rem;
 }
 
@@ -363,7 +391,7 @@ footer {
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: #aaaaaa;
   margin-bottom: 0.5rem;
 }
 
@@ -374,7 +402,7 @@ footer {
 }
 .footer-links li a {
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: #aaaaaa;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: color 0.2s, border-color 0.2s;
@@ -386,7 +414,7 @@ footer {
 
 .footer-copy {
   font-size: 0.8rem;
-  color: #444;
+  color: #888888;
   text-align: right;
 }
 
