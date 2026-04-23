@@ -12,162 +12,96 @@
 </head>
 <body>
 
-  <!-- ════ HEADER ════ -->
-  <header>
-    
+  <!-- ════ TOPO: LOGO CENTRALIZADA ════ -->
+  <div class="top-logo">
     <a href="index.html" class="logo-area">
       <div class="logo-text">
         <span class="top">Blog dos Caneludos</span>
         <span class="sub">Futebol do jeito certo</span>
       </div>
     </a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-    </nav>
-  </header><!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog dos Caneludos</title>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  </div>
 
-  <!-- ════ HEADER ════ -->
+  <!-- ════ NAVBAR VERDE HORIZONTAL ════ -->
   <header>
-    
-    <a href="index.html" class="logo-area">
-      <div class="logo-text">
-        <span class="top">Blog dos Caneludos</span>
-        <span class="sub">Futebol do jeito certo</span>
-      </div>
-    </a>
     <nav>
       <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="contato.html">Contato</a></li>
+        <li><button class="nav-btn" id="menuToggle">☰ Menu</button></li>
+        <li class="nav-spacer"></li>
+        <li><a href="sobre.html" class="nav-link">Sobre</a></li>
       </ul>
     </nav>
+    <!-- Dropdown fora do ul, filho direto do header -->
+    <div class="nav-dropdown" id="navDropdown">
+      <div class="dropdown-col">
+        <p class="dropdown-cat">Futebol BR</p>
+        <a href="brasileirao.html">Brasileirão</a>
+        <a href="cdb.html">Copa do Brasil</a>
+        <a href="SerieB.html">Série B</a>
+        <a href="Estaduais.html">Estaduais</a>
+      </div>
+      <div class="dropdown-col">
+        <p class="dropdown-cat">Sul-americano</p>
+        <a href="liberta.html">Copa Libertadores</a>
+        <a href="sula.html">Copa Sul-Americana</a>
+      </div>
+      <div class="dropdown-col">
+        <p class="dropdown-cat">Futebol Mundial</p>
+        <a href="uefaCL.html">Champions League</a>
+        <a href="uefaEL.html">Europa League</a>
+        <a href="PL.html">Premier League</a>
+        <a href="Laliga.html">La Liga</a>
+        <a href="SeriaA.html">Serie A</a>
+      </div>
+      <div class="dropdown-col">
+        <p class="dropdown-cat">Mercado</p>
+        <a href="mercado.html">Transferências</a>
+      </div>
+    </div>
   </header>
 
-  <!-- ════ HERO ════ -->
-  <section class="hero">
-    <div class="hero-tag">⚡ Novidades do mundo da bola</div>
-    <h1>Notícias do futebol<br><span>do jeito que você nunca viu</span></h1>
-    <p class="sub">Informação, humor e a paixão que todo torcedor tem pelo jogo.</p>
+  <!-- ════ CONTEÚDO PRINCIPAL ════ -->
+   <main class="page-main">
+
+  <!-- TÍTULO DA PÁGINA -->
+  <section class="categoria-topo">
+    <h1>Brasileirão</h1>
+    <p>Últimas notícias, resultados e análises do Campeonato Brasileiro</p>
   </section>
 
-  <!-- ════ CONTAINER (SIDEBAR + MAIN) ════ -->
-  <div class="container">
+  <!-- LISTA DE NOTÍCIAS -->
+  <section class="lista-noticias">
 
-    <!-- ── SIDEBAR / MENU DE CATEGORIAS ── -->
-    <aside>
-      <p class="menu-label">📋 Categorias</p>
-
-      <div class="menu-category">
-        <button class="cat-title" aria-expanded="false">Futebol BR</button>
-        <ul class="cat-links" hidden>
-          <li><a href="brasileirao.html">Brasileirão</a></li>
-          <li><a href="cdb.html">Copa do Brasil</a></li>
-          <li><a href="SerieB.html">Brasileirão Série B</a></li>
-          <li><a href="Estaduais.html">Estaduais</a></li>
-        </ul>
+    <a href="noticia1.html" class="noticia-item">
+      <img src="imagens/flaXpal.jpg">
+      <div>
+        <h2>Flamengo vence e Palmeiras Também e matém liderança</h2>
+        <p> Palmeiras venceu o Vitória mas ver Flamengo ameaçando a liderança após a crescente perfomace do time rubro negro de Lèo Jardim.</p>
+        <span>Atualizado há 1 hora</span>
       </div>
+    </a>
 
-      <div class="menu-category">
-        <button class="cat-title" aria-expanded="false">Futebol Sul-americano</button>
-        <ul class="cat-links" hidden>
-          <li><a href="liberta.html">Copa Libertadores</a></li>
-          <li><a href="sula.html">Copa Sul-Americana</a></li>
-        </ul>
+    <a href="noticia2br.html" class="noticia-item">
+      <img src="imagens/noticia2br.jpg">
+      <div>
+        <h2>Rodada cheia de gols agita o Brasileirão</h2>
+        <p>Times ofensivos dominaram a rodada com placares elásticos.</p>
+        <span>Hoje</span>
       </div>
+    </a>
 
-      <div class="menu-category">
-        <button class="cat-title" aria-expanded="false">Futebol Mundial</button>
-        <ul class="cat-links" hidden>
-          <li><a href="uefaCL.html">Champions League</a></li>
-          <li><a href="uefaEL.html">Europa League</a></li>
-          <li><a href="PL.html">Premier League</a></li>
-          <li><a href="Laliga.html">La Liga</a></li>
-          <li><a href="SeriaA.html">Serie A</a></li>
-        </ul>
+    <a href="#" class="noticia-item">
+      <img src="imagens/.jpg">
+      <div>
+        <h2>Clássico termina empatado e gera polêmica</h2>
+        <p>Arbitragem volta a ser tema após decisões controversas.</p>
+        <span>Ontem</span>
       </div>
+    </a>
 
-      <div class="menu-category">
-        <button class="cat-title" aria-expanded="false">Mercado da Bola</button>
-        <ul class="cat-links" hidden>
-          <li><a href="mercado.html">Mercado de Transferências</a></li>
-        </ul>
-      </div>
-    </aside>
+  </section>
 
-    <!-- ── CONTEÚDO PRINCIPAL ── -->
-    <main>
-
-      <!-- Destaques -->
-      <p class="section-label">🔥 Destaques</p>
-      <div class="destaques-grid">
-
-        <a href="brasileirao.html" class="card">
-          <p class="card-cat">Brasileirão</p>
-          <h3>Rodada a rodada: quem lidera a tabela?</h3>
-          <p>Acompanhe os resultados e a classificação atualizada do Campeonato Brasileiro.</p>
-          <p class="card-meta">Atualizado hoje</p>
-        </a>
-
-        <a href="liberta.html" class="card">
-          <p class="card-cat">Copa Libertadores</p>
-          <h3>A briga dos brasileiros na América</h3>
-          <p>Veja como estão os clubes do Brasil na principal competição continental.</p>
-          <p class="card-meta">Atualizado hoje</p>
-        </a>
-
-        <a href="uefaCL.html" class="card">
-          <p class="card-cat">Champions League</p>
-          <h3>Europa em chamas: quem vai à final?</h3>
-          <p>As semifinais se aproximam e a briga pelo título europeu esquenta.</p>
-          <p class="card-meta">Atualizado hoje</p>
-        </a>
-
-        <a href="mercado.html" class="card">
-          <p class="card-cat">Mercado da Bola</p>
-          <h3>As transferências que vão bombar em 2026</h3>
-          <p>Rumores, confirmações e tudo o que rola no mercado de transferências.</p>
-          <p class="card-meta">Atualizado hoje</p>
-        </a>
-
-      </div>
-
-      <!-- Nossa Proposta -->
-      <p class="section-label" style="margin-top: 3rem;">🏠 Nossa Proposta</p>
-      <div class="proposta-card">
-        <h2>Por que o Blog dos Caneludos?</h2>
-        <p>
-          Montamos este blog porque acreditamos que o futebol
-          merece ser falado, debatido e celebrado de uma forma <strong>leve e envolvente</strong>.
-          Nosso objetivo é trazer notícias, análises, curiosidades e opiniões sobre o mundo
-          da bola em uma linguagem descontraída, aproximando o torcedor da informação. ⚽
-        </p>
-        <p style="margin-top: 0.75rem;">
-          Inspirados pelo estilo autêntico e irreverente do <strong>De Sola</strong> e pela
-          forma moderna e dinâmica da <strong>CazéTV</strong>, queremos criar um espaço onde
-          o futebol seja discutido com informação, humor e a paixão que todo torcedor tem pelo jogo.
-        </p>
-      </div>
-
-    </main>
-
-  </div>
+</main>
 
   <!-- ════ FOOTER ════ -->
   <footer>
@@ -176,7 +110,7 @@
         <p class="footer-links-label">Links úteis</p>
         <ul class="footer-links">
           <li><a href="https://ge.globo.com/" target="_blank">GE Globo</a></li>
-          <li><a href="https://cazétv.com.br/" target="_blank">CazéTV</a></li>
+          <li><a href="https://cazetv.com.br/" target="_blank">CazéTV</a></li>
         </ul>
       </div>
       <p class="footer-copy">&copy; 2026 Blog dos Caneludos.<br>Todos os direitos reservados.</p>
@@ -184,21 +118,19 @@
   </footer>
 
   <script>
-    document.querySelectorAll('.cat-title').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const isOpen = btn.getAttribute('aria-expanded') === 'true';
-        // fecha todos
-        document.querySelectorAll('.cat-title').forEach(b => {
-          b.setAttribute('aria-expanded', 'false');
-          b.nextElementSibling.hidden = true;
-        });
-        // abre o clicado (se estava fechado)
-        if (!isOpen) {
-          btn.setAttribute('aria-expanded', 'true');
-          btn.nextElementSibling.hidden = false;
-        }
-      });
+    const menuToggle = document.getElementById('menuToggle');
+    const navDropdown = document.getElementById('navDropdown');
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = navDropdown.classList.contains('open');
+      navDropdown.classList.toggle('open', !isOpen);
+      menuToggle.classList.toggle('active', !isOpen);
     });
+    document.addEventListener('click', () => {
+      navDropdown.classList.remove('open');
+      menuToggle.classList.remove('active');
+    });
+    navDropdown.addEventListener('click', (e) => e.stopPropagation());
   </script>
 </body>
 </html>
