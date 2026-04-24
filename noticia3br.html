@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog dos Caneludos</title>
+  <title>[TÍTULO DA NOTÍCIA] — Blog dos Caneludos</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <!-- ════ TOPO: LOGO CENTRALIZADA ════ -->
+  <!-- ════ LOGO ════ -->
   <div class="top-logo">
     <a href="index.html" class="logo-area">
       <div class="logo-text">
@@ -22,7 +22,7 @@
     </a>
   </div>
 
-  <!-- ════ NAVBAR VERDE HORIZONTAL ════ -->
+  <!-- ════ NAVBAR ════ -->
   <header>
     <nav>
       <ul>
@@ -31,7 +31,6 @@
         <li><a href="sobre.html" class="nav-link">Sobre</a></li>
       </ul>
     </nav>
-    <!-- Dropdown fora do ul, filho direto do header -->
     <div class="nav-dropdown" id="navDropdown">
       <div class="dropdown-col">
         <p class="dropdown-cat">Futebol BR</p>
@@ -60,48 +59,60 @@
     </div>
   </header>
 
-  <!-- ════ CONTEÚDO PRINCIPAL ════ -->
-   <main class="page-main">
+  <!-- ════ CONTEÚDO ════ -->
+  <main class="noticia-main">
+    <article class="noticia-container">
 
-  <!-- TÍTULO DA PÁGINA -->
-  <section class="categoria-topo">
-    <h1>Brasileirão</h1>
-    <p>Últimas notícias, resultados e análises do Campeonato Brasileiro</p>
-  </section>
+      <!-- ✏️ TROQUE: nome da categoria ex: Brasileirão / Champions League / Mercado da Bola -->
+      <span class="noticia-categoria">[CATEGORIA]</span>
 
-  <!-- LISTA DE NOTÍCIAS -->
-  <section class="lista-noticias">
+      <!-- ✏️ TROQUE: título principal da notícia -->
+      <h1>[TÍTULO DA NOTÍCIA]</h1>
 
-    <a href="noticia1br.html" class="noticia-item">
-      <img src="imagens/flaXpal.jpg">
-      <div>
-        <h2>Flamengo vence e Palmeiras Também e matém liderança</h2>
-        <p> Palmeiras venceu o Vitória mas ver Flamengo ameaçando a liderança após a crescente perfomace do time rubro negro de Lèo Jardim.</p>
-        <span>Atualizado há 1 hora</span>
+      <!-- ✏️ TROQUE: subtítulo / linha de apoio -->
+      <h2 class="noticia-sub">[SUBTÍTULO — resumo rápido do que aconteceu]</h2>
+
+      <!-- ✏️ TROQUE: autor e data -->
+      <div class="noticia-meta">
+        <span>Por [AUTOR]</span>
+        <span>•</span>
+        <span>[DATA — ex: Hoje / 24 de abril de 2026]</span>
       </div>
-    </a>
 
-    <a href="noticia2br.html" class="noticia-item">
-      <img src="imagens/noticia2br.jpg">
-      <div>
-        <h2>Rodada cheia de gols agita o Brasileirão</h2>
-        <p>Times ofensivos dominaram a rodada com placares elásticos.</p>
-        <span>Hoje</span>
+      <!-- ✏️ TROQUE: caminho da imagem principal -->
+      <img src="imagens/[IMAGEM-PRINCIPAL].jpg" alt="[DESCRIÇÃO DA IMAGEM]" class="noticia-img">
+
+      <!-- ════ TEXTO DA NOTÍCIA ════ -->
+      <div class="noticia-texto">
+
+        <!-- ✏️ TROQUE: primeiro parágrafo — introdução/gancho -->
+        <p>[PARÁGRAFO 1 — apresente o fato principal de forma direta e envolvente.]</p>
+
+        <!-- ✏️ TROQUE: desenvolvimento -->
+        <p>[PARÁGRAFO 2 — desenvolva o contexto. O que aconteceu antes? Quem estava envolvido?]</p>
+
+        <!-- ✏️ OPCIONAL: imagem no meio do texto — apague se não usar -->
+        <img src="imagens/[IMAGEM-MEIO].jpg" alt="[DESCRIÇÃO]" class="noticia-img">
+
+        <!-- ✏️ TROQUE: mais desenvolvimento -->
+        <p>[PARÁGRAFO 3 — aprofunde o tema. Números, declarações, consequências.]</p>
+
+        <!-- ✏️ TROQUE: conclusão -->
+        <p>[PARÁGRAFO 4 — finalize com opinião, impacto ou o que vem por aí.]</p>
+
       </div>
-    </a>
 
-    <a href="noticia3br.html" class="noticia-item">
-      <img src="imagens/.jpg">
-      <div>
-        <h2>Clássico termina empatado e gera polêmica</h2>
-        <p>Arbitragem volta a ser tema após decisões controversas.</p>
-        <span>Ontem</span>
-      </div>
-    </a>
+    </article>
 
-  </section>
+    <!-- ════ PUBLICIDADE ════ -->
+    <div class="ad-banner">
+      <span class="ad-label">Publicidade</span>
+      <a href="https://multivix.edu.br/" target="_blank">
+        <img src="imagens/multivix1.jpg" alt="Faculdade Multivix">
+      </a>
+    </div>
 
-</main>
+  </main>
 
   <!-- ════ FOOTER ════ -->
   <footer>
@@ -132,5 +143,6 @@
     });
     navDropdown.addEventListener('click', (e) => e.stopPropagation());
   </script>
+
 </body>
 </html>

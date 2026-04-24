@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog dos Caneludos</title>
+  <title>[CATEGORIA] — Blog dos Caneludos</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <!-- ════ TOPO: LOGO CENTRALIZADA ════ -->
+  <!-- ════ LOGO ════ -->
   <div class="top-logo">
     <a href="index.html" class="logo-area">
       <div class="logo-text">
@@ -22,7 +22,7 @@
     </a>
   </div>
 
-  <!-- ════ NAVBAR VERDE HORIZONTAL ════ -->
+  <!-- ════ NAVBAR ════ -->
   <header>
     <nav>
       <ul>
@@ -31,7 +31,6 @@
         <li><a href="sobre.html" class="nav-link">Sobre</a></li>
       </ul>
     </nav>
-    <!-- Dropdown fora do ul, filho direto do header -->
     <div class="nav-dropdown" id="navDropdown">
       <div class="dropdown-col">
         <p class="dropdown-cat">Futebol BR</p>
@@ -60,8 +59,61 @@
     </div>
   </header>
 
+  <!-- ════ CONTEÚDO ════ -->
+  <main class="page-main">
 
-   <footer>
+    <!-- Cabeçalho da categoria -->
+    <div class="cat-header">
+      <!-- ✏️ TROQUE: nome da categoria -->
+      <h1 class="cat-titulo">[CATEGORIA]</h1>
+      <!-- ✏️ TROQUE: descrição curta -->
+      <p class="cat-desc">[Descrição curta da categoria — ex: Últimas notícias, resultados e análises do Brasileirão]</p>
+    </div>
+
+    <!-- Grade de notícias -->
+    <div class="noticias-grid">
+
+      <!-- ══ NOTÍCIA 1 ══ -->
+      <!-- ✏️ TROQUE: href pelo nome do arquivo da notícia -->
+      <a href="[ARQUIVO-NOTICIA-1].html" class="noticia-card">
+        <!-- ✏️ TROQUE: imagem -->
+        <img src="imagens/[IMAGEM-1].jpg" alt="[DESCRIÇÃO]" class="noticia-card-img">
+        <div class="noticia-card-body">
+          <!-- ✏️ TROQUE: título -->
+          <h2 class="noticia-card-titulo">[TÍTULO DA NOTÍCIA 1]</h2>
+          <!-- ✏️ TROQUE: resumo -->
+          <p class="noticia-card-resumo">[Resumo curto da notícia — 1 ou 2 frases.]</p>
+          <!-- ✏️ TROQUE: data -->
+          <span class="noticia-card-meta">[DATA]</span>
+        </div>
+      </a>
+
+      <!-- ══ NOTÍCIA 2 ══ -->
+      <a href="[ARQUIVO-NOTICIA-2].html" class="noticia-card">
+        <img src="imagens/[IMAGEM-2].jpg" alt="[DESCRIÇÃO]" class="noticia-card-img">
+        <div class="noticia-card-body">
+          <h2 class="noticia-card-titulo">[TÍTULO DA NOTÍCIA 2]</h2>
+          <p class="noticia-card-resumo">[Resumo curto da notícia — 1 ou 2 frases.]</p>
+          <span class="noticia-card-meta">[DATA]</span>
+        </div>
+      </a>
+
+      <!-- ══ NOTÍCIA 3 ══ -->
+      <a href="[ARQUIVO-NOTICIA-3].html" class="noticia-card">
+        <img src="imagens/[IMAGEM-3].jpg" alt="[DESCRIÇÃO]" class="noticia-card-img">
+        <div class="noticia-card-body">
+          <h2 class="noticia-card-titulo">[TÍTULO DA NOTÍCIA 3]</h2>
+          <p class="noticia-card-resumo">[Resumo curto da notícia — 1 ou 2 frases.]</p>
+          <span class="noticia-card-meta">[DATA]</span>
+        </div>
+      </a>
+
+    </div><!-- fim .noticias-grid -->
+
+  </main>
+
+  <!-- ════ FOOTER ════ -->
+  <footer>
     <div class="footer-inner">
       <div>
         <p class="footer-links-label">Links úteis</p>
