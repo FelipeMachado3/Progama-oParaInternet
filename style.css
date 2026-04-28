@@ -650,18 +650,125 @@ footer {
 }
 
 /* ════════════════════════════════════════
+   TICKER DE ÚLTIMAS NOTÍCIAS
+   ════════════════════════════════════════ */
+.ticker-wrap {
+  background: var(--gray);
+  border-bottom: 2px solid var(--green);
+  display: flex;
+  align-items: center;
+  height: 36px;
+  overflow: hidden;
+  position: relative;
+}
+
+.ticker-label {
+  flex-shrink: 0;
+  background: var(--accent);
+  color: #ffffff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0 1rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.ticker-track {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+}
+
+.ticker-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  white-space: nowrap;
+  animation: ticker-scroll 40s linear infinite;
+  padding-left: 2rem;
+}
+
+.ticker-content:hover {
+  animation-play-state: paused;
+}
+
+.ticker-content span {
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.82rem;
+  color: #cccccc;
+}
+
+.ticker-sep {
+  color: var(--green) !important;
+  font-weight: 700;
+  font-size: 1rem !important;
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ════════════════════════════════════════
+   BREADCRUMB
+   ════════════════════════════════════════ */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.breadcrumb-link {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--green);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.breadcrumb-link:hover { color: var(--green-dark); }
+
+.breadcrumb-sep {
+  font-size: 0.85rem;
+  color: #aaaaaa;
+  line-height: 1;
+}
+
+.breadcrumb-current {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ════════════════════════════════════════
    HERO BANNER
    ════════════════════════════════════════ */
 .hero-banner {
   width: 100%;
-  max-height: 180px;
+  max-height: 120px;
   overflow: hidden;
   line-height: 0;
 }
 
 .hero-banner img {
   width: 100%;
-  max-height: 420px;
+  max-height: 360px;
   object-fit: cover;
   object-position: center bottom;
   display: block;
