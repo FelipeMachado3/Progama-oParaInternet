@@ -15,7 +15,7 @@
   <!-- ════ HERO BANNER ════ -->
 <div class="hero-banner">
   <a href="index.html" class="logo-area"></a>
-  <img src="imagens/BLOG DOS CANELUDOS.jpg" alt="Blog dos Caneludos">
+  <img src="imagens/banner.jpg" alt="Blog dos Caneludos">
 </div>
 
   <!-- ════ NAVBAR VERDE HORIZONTAL ════ -->
@@ -99,46 +99,289 @@
       <span class="breadcrumb-current">Início</span>
     </nav>
 
-    <!-- GRID DE DESTAQUES -->
+    <!-- CARROSSEL DE DESTAQUES -->
     <section class="destaques-section">
-      <div class="destaques-grid">
+      <div class="carousel-wrap">
 
-        <a href="brasileirao.html" class="card card-grande">
-          <img src="imagens/flaXpal.jpg" alt="Brasileirão" class="card-img">
-          <span class="card-badge">Destaque</span>
-          <p class="card-cat">Brasileirão</p>
-          <h2>Rodada a rodada: quem lidera a tabela?</h2>
-          <p>Acompanhe os resultados e a classificação atualizada do Campeonato Brasileiro.</p>
-          <p class="card-meta">Atualizado hoje</p>
-        </a>
+        <!-- SLIDES -->
+        <div class="carousel-track" id="carouselTrack">
 
-        <div class="cards-secundarios">
-          <a href="liberta.html" class="card">
-            <p class="card-cat">Copa Libertadores</p>
-            <h3>A briga dos brasileiros na América</h3>
-            <p>Veja como estão os clubes do Brasil na principal competição continental.</p>
-            <p class="card-meta">Atualizado hoje</p>
-          </a>
-          <a href="uefaCL.html" class="card">
-            <p class="card-cat">Champions League</p>
-            <h3>Europa em chamas: quem vai à final?</h3>
-            <p>As semifinais se aproximam e a briga pelo título europeu esquenta.</p>
-            <p class="card-meta">Atualizado hoje</p>
-          </a>
-          <a href="mercado.html" class="card">
-            <p class="card-cat">Mercado da Bola</p>
-            <h3>As transferências que vão bombar em 2026</h3>
-            <p>Rumores, confirmações e tudo que rola no mercado.</p>
-            <p class="card-meta">Atualizado hoje</p>
-          </a>
-          <a href="PL.html" class="card">
-            <p class="card-cat">Premier League</p>
-            <h3>Quem vai ser campeão inglês esta temporada?</h3>
-            <p>A briga pelo título na liga mais emocionante do mundo.</p>
-            <p class="card-meta">Atualizado hoje</p>
-          </a>
+          <!-- SLIDE 1 -->
+          <div class="carousel-slide">
+            <div class="carousel-main">
+              <a href="brasileirao.html" class="carousel-hero">
+                <img src="imagens/flaXpal.jpg" alt="Brasileirão" class="carousel-hero-img">
+                <div class="carousel-hero-overlay">
+                  <span class="card-badge">🔥 Destaque</span>
+                  <p class="card-cat">Brasileirão</p>
+                  <h2>Flamengo vence Palmeiras e assume liderança</h2>
+                  <p>Gol nos acréscimos define clássico no Maracanã e Fla abre 3 pontos de vantagem.</p>
+                  <p class="card-meta">Atualizado hoje</p>
+                </div>
+              </a>
+              <div class="carousel-side">
+                <a href="liberta.html" class="card">
+                  <p class="card-cat">Libertadores</p>
+                  <h3>A briga dos brasileiros na América</h3>
+                  <p>Veja como estão Flamengo, Botafogo e Atlético na fase de grupos.</p>
+                  <p class="card-meta">Atualizado hoje</p>
+                </a>
+                <a href="uefaCL.html" class="card">
+                  <p class="card-cat">Champions League</p>
+                  <h3>Europa em chamas: quem vai à final?</h3>
+                  <p>As semifinais se aproximam e a briga pelo título europeu esquenta.</p>
+                  <p class="card-meta">Atualizado hoje</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 2 -->
+          <div class="carousel-slide">
+            <div class="carousel-main">
+              <a href="uefaCL.html" class="carousel-hero">
+                <img src="imagens/flaXpal.jpg" alt="Champions League" class="carousel-hero-img">
+                <div class="carousel-hero-overlay">
+                  <span class="card-badge">⭐ Champions</span>
+                  <p class="card-cat">Champions League</p>
+                  <h2>Real Madrid x Bayern: a batalha das semifinais começa</h2>
+                  <p>Os gigantes europeus se enfrentam em duelo que pode definir o campeão desta edição.</p>
+                  <p class="card-meta">Atualizado hoje</p>
+                </div>
+              </a>
+              <div class="carousel-side">
+                <a href="PL.html" class="card">
+                  <p class="card-cat">Premier League</p>
+                  <h3>Arsenal goleia e entra na briga pelo título inglês</h3>
+                  <p>Gunners vencem por 4x0 e colocam pressão no Liverpool.</p>
+                  <p class="card-meta">Atualizado hoje</p>
+                </a>
+                <a href="Laliga.html" class="card">
+                  <p class="card-cat">La Liga</p>
+                  <h3>Real Madrid segura liderança no Espanhol</h3>
+                  <p>Com Vinicius Jr. inspirado, os Merengues vencem mais uma.</p>
+                  <p class="card-meta">Atualizado hoje</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 3 -->
+          <div class="carousel-slide">
+            <div class="carousel-main">
+              <a href="mercado.html" class="carousel-hero">
+                <img src="imagens/flaXpal.jpg" alt="Mercado da Bola" class="carousel-hero-img">
+                <div class="carousel-hero-overlay">
+                  <span class="card-badge">💸 Mercado</span>
+                  <p class="card-cat">Mercado da Bola</p>
+                  <h2>As transferências que vão bombar no meio do ano</h2>
+                  <p>Gabigol na Europa, Neymar de volta ao Brasil e mais rumores quentes desta janela.</p>
+                  <p class="card-meta">Atualizado hoje</p>
+                </div>
+              </a>
+              <div class="carousel-side">
+                <a href="brasileirao.html" class="card">
+                  <p class="card-cat">Brasileirão</p>
+                  <h3>Tabela atualizada: veja a classificação completa</h3>
+                  <p>Confira quem sobe, quem cai e quem briga pelo título.</p>
+                  <p class="card-meta">Atualizado hoje</p>
+                </a>
+                <a href="liberta.html" class="card">
+                  <p class="card-cat">Libertadores</p>
+                  <h3>Maracanã recebe duelo decisivo da fase de grupos</h3>
+                  <p>Flamengo joga em casa em partida valiosíssima para a classificação.</p>
+                  <p class="card-meta">Atualizado hoje</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /carousel-track -->
+
+        <!-- CONTROLES -->
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="prevBtn" aria-label="Anterior">&#8249;</button>
+          <div class="carousel-dots" id="carouselDots">
+            <button class="carousel-dot active" data-index="0"></button>
+            <button class="carousel-dot" data-index="1"></button>
+            <button class="carousel-dot" data-index="2"></button>
+          </div>
+          <button class="carousel-btn" id="nextBtn" aria-label="Próximo">&#8250;</button>
         </div>
 
+      </div>
+    </section>
+
+    <!-- ════ ATALHOS DE COMPETIÇÕES (item 5) ════ -->
+    <section class="comp-atalhos-section">
+      <div class="section-header">
+        <span class="section-header-linha"></span>
+        <h2 class="section-header-titulo">⚽ Competições</h2>
+        <span class="section-header-linha"></span>
+      </div>
+      <div class="comp-atalhos-grid">
+        <a href="brasileirao.html" class="comp-btn">
+          <span class="comp-icon">🇧🇷</span>
+          <span>Brasileirão</span>
+        </a>
+        <a href="cdb.html" class="comp-btn">
+          <span class="comp-icon">🏆</span>
+          <span>Copa do Brasil</span>
+        </a>
+        <a href="SerieB.html" class="comp-btn">
+          <span class="comp-icon">📋</span>
+          <span>Série B</span>
+        </a>
+        <a href="liberta.html" class="comp-btn">
+          <span class="comp-icon">🌎</span>
+          <span>Libertadores</span>
+        </a>
+        <a href="sula.html" class="comp-btn">
+          <span class="comp-icon">🌍</span>
+          <span>Sul-Americana</span>
+        </a>
+        <a href="uefaCL.html" class="comp-btn">
+          <span class="comp-icon">⭐</span>
+          <span>Champions League</span>
+        </a>
+        <a href="PL.html" class="comp-btn">
+          <span class="comp-icon">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+          <span>Premier League</span>
+        </a>
+        <a href="Laliga.html" class="comp-btn">
+          <span class="comp-icon">🇪🇸</span>
+          <span>La Liga</span>
+        </a>
+        <a href="SeriaA.html" class="comp-btn">
+          <span class="comp-icon">🇮🇹</span>
+          <span>Serie A</span>
+        </a>
+        <a href="mercado.html" class="comp-btn comp-btn-destaque">
+          <span class="comp-icon">💸</span>
+          <span>Mercado da Bola</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ════ POR COMPETIÇÃO (item 1 + cabeçalhos item 4) ════ -->
+
+    <!-- BRASILEIRÃO -->
+    <section class="liga-section">
+      <div class="section-header">
+        <span class="section-header-linha"></span>
+        <h2 class="section-header-titulo">🇧🇷 Brasileirão</h2>
+        <span class="section-header-linha flex-grow"></span>
+        <a href="brasileirao.html" class="section-ver-mais">Ver tudo →</a>
+      </div>
+      <div class="liga-grid">
+        <a href="brasileirao.html" class="liga-card">
+          <p class="card-cat">Brasileirão</p>
+          <h3>Quem segura o Flamengo no topo?</h3>
+          <p>Com 100% de aproveitamento nas primeiras rodadas, o Fla pressiona a concorrência.</p>
+          <p class="card-meta">Hoje</p>
+        </a>
+        <a href="brasileirao.html" class="liga-card">
+          <p class="card-cat">Brasileirão</p>
+          <h3>Palmeiras reage após tropeço e vence clássico</h3>
+          <p>O Verdão mostrou força e reencontrou o caminho da vitória no Allianz Parque.</p>
+          <p class="card-meta">Hoje</p>
+        </a>
+        <a href="brasileirao.html" class="liga-card">
+          <p class="card-cat">Brasileirão</p>
+          <h3>Surpresas da rodada: quem brilhou no interior?</h3>
+          <p>Times menores agitaram a tabela e complicaram os grandes nesta rodada.</p>
+          <p class="card-meta">Ontem</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- LIBERTADORES -->
+    <section class="liga-section">
+      <div class="section-header">
+        <span class="section-header-linha"></span>
+        <h2 class="section-header-titulo">🌎 Copa Libertadores</h2>
+        <span class="section-header-linha flex-grow"></span>
+        <a href="liberta.html" class="section-ver-mais">Ver tudo →</a>
+      </div>
+      <div class="liga-grid">
+        <a href="liberta.html" class="liga-card">
+          <p class="card-cat">Libertadores</p>
+          <h3>Brasileiros na fase de grupos: como estão?</h3>
+          <p>Flamengo, Botafogo e Atlético-MG enfrentam rivais difíceis na fase inicial.</p>
+          <p class="card-meta">Hoje</p>
+        </a>
+        <a href="liberta.html" class="liga-card">
+          <p class="card-cat">Libertadores</p>
+          <h3>River Plate ameaça hegemonia brasileira no torneio</h3>
+          <p>O time argentino chega embalado e pode ser o maior obstáculo dos clubes do Brasil.</p>
+          <p class="card-meta">Ontem</p>
+        </a>
+        <a href="liberta.html" class="liga-card">
+          <p class="card-cat">Libertadores</p>
+          <h3>Maracanã receberá duelo valioso da fase de grupos</h3>
+          <p>Flamengo joga em casa em partida decisiva para a classificação às oitavas.</p>
+          <p class="card-meta">2 dias atrás</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- CHAMPIONS LEAGUE -->
+    <section class="liga-section">
+      <div class="section-header">
+        <span class="section-header-linha"></span>
+        <h2 class="section-header-titulo">⭐ Champions League</h2>
+        <span class="section-header-linha flex-grow"></span>
+        <a href="uefaCL.html" class="section-ver-mais">Ver tudo →</a>
+      </div>
+      <div class="liga-grid">
+        <a href="uefaCL.html" class="liga-card">
+          <p class="card-cat">Champions League</p>
+          <h3>Real Madrid x Bayern: a batalha das semis começa</h3>
+          <p>Os gigantes se enfrentam em duelo que pode definir o futuro do torneio europeu.</p>
+          <p class="card-meta">Hoje</p>
+        </a>
+        <a href="uefaCL.html" class="liga-card">
+          <p class="card-cat">Champions League</p>
+          <h3>Arsenal surpreende e vai às semifinais pela 1ª vez em décadas</h3>
+          <p>Os Gunners fizeram história ao eliminar o PSG em noite épica em Londres.</p>
+          <p class="card-meta">Ontem</p>
+        </a>
+        <a href="uefaCL.html" class="liga-card">
+          <p class="card-cat">Champions League</p>
+          <h3>Vinicius Jr. candidato a melhor jogador da Champions</h3>
+          <p>Com números absurdos, o brasileiro é a principal esperança do Real Madrid na competição.</p>
+          <p class="card-meta">2 dias atrás</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- MERCADO DA BOLA -->
+    <section class="liga-section">
+      <div class="section-header">
+        <span class="section-header-linha"></span>
+        <h2 class="section-header-titulo">💸 Mercado da Bola</h2>
+        <span class="section-header-linha flex-grow"></span>
+        <a href="mercado.html" class="section-ver-mais">Ver tudo →</a>
+      </div>
+      <div class="liga-grid">
+        <a href="mercado.html" class="liga-card">
+          <p class="card-cat">Transferências</p>
+          <h3>Gabigol perto da Europa: qual destino?</h3>
+          <p>O atacante recebe sondagens de clubes italianos e portugueses nesta janela.</p>
+          <p class="card-meta">Hoje</p>
+        </a>
+        <a href="mercado.html" class="liga-card">
+          <p class="card-cat">Transferências</p>
+          <h3>Os 5 reforços mais aguardados do Brasileirão em 2026</h3>
+          <p>Do mercado internacional ao interior do Brasil, confira quem pode chegar.</p>
+          <p class="card-meta">Ontem</p>
+        </a>
+        <a href="mercado.html" class="liga-card">
+          <p class="card-cat">Transferências</p>
+          <h3>Neymar avaliado por gigante da Série A: negócio possível?</h3>
+          <p>Rumores apontam interesse de clube brasileiro na contratação do craque.</p>
+          <p class="card-meta">2 dias atrás</p>
+        </a>
       </div>
     </section>
 
@@ -161,19 +404,84 @@
 
   </main>
 
-  <!-- ════ FOOTER ════ -->
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <p class="footer-links-label">Links úteis</p>
-        <ul class="footer-links">
-          <li><a href="https://ge.globo.com/" target="_blank">GE Globo</a></li>
-          <li><a href="https://cazetv.com.br/" target="_blank">CazéTV</a></li>
+  <!-- ════ FOOTER ROBUSTO (item 6) ════ -->
+  <footer class="footer-novo">
+    <div class="footer-top">
+      <div class="footer-col footer-col-brand">
+        <p class="footer-brand-nome">Blog dos Caneludos</p>
+        <p class="footer-brand-slogan">Futebol do jeito certo ⚽</p>
+        <p class="footer-brand-desc">O seu portal de notícias, análises e opiniões sobre o futebol brasileiro e mundial — sem frescura.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-titulo">Futebol BR</p>
+        <ul class="footer-col-links">
+          <li><a href="brasileirao.html">Brasileirão</a></li>
+          <li><a href="cdb.html">Copa do Brasil</a></li>
+          <li><a href="SerieB.html">Série B</a></li>
+          <li><a href="Estaduais.html">Estaduais</a></li>
         </ul>
       </div>
-      <p class="footer-copy">&copy; 2026 Blog dos Caneludos.<br>Todos os direitos reservados.</p>
+      <div class="footer-col">
+        <p class="footer-col-titulo">Sul-americano</p>
+        <ul class="footer-col-links">
+          <li><a href="liberta.html">Copa Libertadores</a></li>
+          <li><a href="sula.html">Copa Sul-Americana</a></li>
+        </ul>
+        <p class="footer-col-titulo" style="margin-top:1.25rem">Mundial</p>
+        <ul class="footer-col-links">
+          <li><a href="uefaCL.html">Champions League</a></li>
+          <li><a href="uefaEL.html">Europa League</a></li>
+          <li><a href="PL.html">Premier League</a></li>
+          <li><a href="Laliga.html">La Liga</a></li>
+          <li><a href="SeriaA.html">Serie A</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-titulo">Links Úteis</p>
+        <ul class="footer-col-links">
+          <li><a href="sobre.html">Sobre o Blog</a></li>
+          <li><a href="mercado.html">Mercado da Bola</a></li>
+          <li><a href="https://ge.globo.com/" target="_blank">GE Globo ↗</a></li>
+          <li><a href="https://cazetv.com.br/" target="_blank">CazéTV ↗</a></li>
+          <li><a href="https://www.transfermarkt.com.br/" target="_blank">Transfermarkt ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Blog dos Caneludos. Todos os direitos reservados.</p>
+      <p class="footer-bottom-right">Feito com ❤️ e paixão pelo futebol</p>
     </div>
   </footer>
+
+  <script>
+    // ── Carrossel de Destaques ──
+    const track   = document.getElementById('carouselTrack');
+    const dots    = document.querySelectorAll('.carousel-dot');
+    const total   = document.querySelectorAll('.carousel-slide').length;
+    let current   = 0;
+    let timer;
+
+    function goTo(index) {
+      current = (index + total) % total;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    function startAuto() {
+      clearInterval(timer);
+      timer = setInterval(() => goTo(current + 1), 6000);
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', () => { goTo(current + 1); startAuto(); });
+    document.getElementById('prevBtn').addEventListener('click', () => { goTo(current - 1); startAuto(); });
+    dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.index); startAuto(); }));
+
+    // Pausa ao hover
+    track.addEventListener('mouseenter', () => clearInterval(timer));
+    track.addEventListener('mouseleave', startAuto);
+
+    startAuto();
+  </script>
 
   <script>
     const menuToggle = document.getElementById('menuToggle');
