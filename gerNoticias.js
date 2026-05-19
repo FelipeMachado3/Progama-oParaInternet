@@ -1,171 +1,316 @@
+// ===============================
+// GERADOR DE NOTÍCIAS HTML
+// Blog dos Caneludos
+// ===============================
+
+const fs = require("fs");
+
+// ===================================
+// DADOS DA NOTÍCIA
+// ===================================
+
+const noticia = {
+
+    categoria: "Brasileirão",
+
+    titulo: "Liderança em jogo: Flamengo encosta e pressiona o Palmeiras",
+
+    subtitulo:
+        "Enquanto o Verdão vence sem convencer, o Mengão faz 2 a 0 no Bahia e entra de vez na disputa",
+
+    autor: "Redação",
+
+    data: "Atualizado hoje",
+
+    imagemPrincipal: "imagens/flaXpal.jpg",
+
+    conteudo1: `
+        O Palmeiras fez o dever de casa…
+        mas daquele jeitão sofrido:
+        1 a 0 magrinho contra o Furacão.
+
+        Enquanto isso, o Flamengo venceu
+        o Bahia por 2 a 0 e encostou
+        de vez na liderança.
+    `,
+
+    imagemSecundaria: "imagens/noticia1.jpg",
+
+    conteudo2: `
+        A rivalidade entre Palmeiras e Flamengo
+        cresceu absurdamente nos últimos anos.
+
+        Hoje, qualquer confronto entre os dois
+        tem clima de decisão.
+    `
+};
+
+// ===================================
+// TEMPLATE HTML
+// ===================================
+
+const html = `
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rodada do Brasileirão tem goleadas, disputa pela liderança e pressão no Z4 — Blog dos Caneludos</title>
+
+  <title>${noticia.titulo}</title>
+
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-  <!-- ════ LOGO ════ -->
+  <!-- TOPO -->
   <div class="top-logo">
+
     <a href="index.html" class="logo-area">
+
       <div class="logo-text">
+
         <span class="top">Blog dos Caneludos</span>
+
         <span class="sub">Futebol do jeito certo</span>
+
       </div>
+
     </a>
+
   </div>
 
-  <!-- ════ NAVBAR ════ -->
+  <!-- NAVBAR -->
   <header>
+
     <nav>
+
       <ul>
-        <li><button class="nav-btn" id="menuToggle">☰ Menu</button></li>
+
+        <li>
+
+          <button class="nav-btn" id="menuToggle">☰ Menu</button>
+
+        </li>
+
         <li class="nav-spacer"></li>
-        <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+
+        <li>
+
+          <a href="sobre.html" class="nav-link">Sobre</a>
+
+        </li>
+
       </ul>
+
     </nav>
 
     <div class="nav-dropdown" id="navDropdown">
+
       <div class="dropdown-col">
+
         <p class="dropdown-cat">Futebol BR</p>
+
         <a href="brasileirao.html">Brasileirão</a>
         <a href="cdb.html">Copa do Brasil</a>
         <a href="SerieB.html">Série B</a>
         <a href="Estaduais.html">Estaduais</a>
+
       </div>
 
       <div class="dropdown-col">
+
         <p class="dropdown-cat">Sul-americano</p>
+
         <a href="liberta.html">Copa Libertadores</a>
         <a href="sula.html">Copa Sul-Americana</a>
+
       </div>
 
       <div class="dropdown-col">
+
         <p class="dropdown-cat">Futebol Mundial</p>
+
         <a href="uefaCL.html">Champions League</a>
         <a href="uefaEL.html">Europa League</a>
         <a href="PL.html">Premier League</a>
         <a href="Laliga.html">La Liga</a>
         <a href="SeriaA.html">Serie A</a>
+
       </div>
 
       <div class="dropdown-col">
+
         <p class="dropdown-cat">Mercado</p>
+
         <a href="mercado.html">Transferências</a>
+
       </div>
+
     </div>
+
   </header>
 
-  <!-- ════ CONTEÚDO ════ -->
+  <!-- CONTEÚDO -->
   <main class="noticia-main">
 
     <article class="noticia-container">
 
-      <span class="noticia-categoria">Brasileirão</span>
+      <!-- CATEGORIA -->
+      <span class="noticia-categoria">
+        ${noticia.categoria}
+      </span>
 
-      <h1>Rodada do Brasileirão tem goleadas, disputa pela liderança e pressão no Z4</h1>
+      <!-- TITULO -->
+      <h1>
+        ${noticia.titulo}
+      </h1>
 
+      <!-- SUBTITULO -->
       <h2 class="noticia-sub">
-        Palmeiras segue líder, Flamengo continua pressionando e Internacional goleia o Vasco em rodada movimentada da Série A.
+        ${noticia.subtitulo}
       </h2>
 
+      <!-- META -->
       <div class="noticia-meta">
-        <span>Por Blog dos Caneludos</span>
+
+        <span>Por ${noticia.autor}</span>
+
         <span>•</span>
-        <span>19 de maio de 2026</span>
+
+        <span>${noticia.data}</span>
+
       </div>
 
-      <img src="imagens/palxcru.jpg" alt="Jogadores comemorando rodada do Brasileirão" class="noticia-img">
+      <!-- IMAGEM -->
+      <img src="${noticia.imagemPrincipal}" class="noticia-img">
 
+      <!-- TEXTO -->
       <div class="noticia-texto">
 
         <p>
-          A rodada do Campeonato Brasileiro foi marcada por jogos intensos, muitos gols e mudanças importantes na tabela da competição. Palmeiras e Flamengo seguem protagonizando a disputa pela liderança, enquanto outras equipes começam a crescer na corrida por vagas continentais.
+          ${noticia.conteudo1}
         </p>
 
-        <p>
-          O Palmeiras manteve a liderança mesmo após tropeçar na rodada, resultado que permitiu ao Flamengo continuar muito próximo na tabela. O clube carioca segue embalado pelo forte desempenho ofensivo e mantém pressão constante sobre o Verdão na briga pelo topo do campeonato.
-        </p>
-
-        <img src="imagens/sanxcox.jpg" alt="Internacional goleia Vasco no Beira-Rio" class="noticia-img">
+        <img src="${noticia.imagemSecundaria}" class="noticia-img">
 
         <p>
-          Santos e Coritiba fizeram um confronto importante pela 16ª rodada do Brasileirão 2026, principalmente para equipes que tentam se afastar da parte inferior da tabela e ganhar estabilidade na competição. O duelo aconteceu na Neo Química Arena e terminou com vitória surpreendente do Coritiba por 3 a 0.
-
-O Santos chegou para a partida em boa fase, vindo de duas vitórias consecutivas e sustentando uma sequência de sete jogos sem derrota no Brasileirão. A equipe apostava no fator torcida e na presença de Neymar para continuar crescendo na tabela.
-        </p>
-
-
-        
-        <p>
-          Outro grande destaque da rodada foi o Internacional. Jogando no Beira-Rio, o Colorado dominou completamente o Vasco e venceu por 4 a 1 em uma das atuações mais convincentes da equipe na temporada. Carbonero, Alerrandro e Bernabei tiveram grande participação na construção da goleada.
-        </p>
-
-        <p>
-          Na parte de baixo da tabela, a pressão aumentou sobre equipes ameaçadas pelo rebaixamento. A rodada também contou com vitórias importantes de clubes que seguem sonhando com Libertadores e vagas internacionais, deixando o Brasileirão ainda mais equilibrado e imprevisível nas próximas semanas.
+          ${noticia.conteudo2}
         </p>
 
       </div>
 
     </article>
 
-    <!-- ════ PUBLICIDADE ════ -->
+    <!-- PUBLICIDADE -->
     <div class="ad-banner">
+
       <span class="ad-label">Publicidade</span>
 
       <a href="https://multivix.edu.br/" target="_blank">
+
         <img src="imagens/multivix1.jpg" alt="Faculdade Multivix">
+
       </a>
+
     </div>
 
   </main>
 
-  <!-- ════ FOOTER ════ -->
+  <!-- FOOTER -->
   <footer>
+
     <div class="footer-inner">
+
       <div>
+
         <p class="footer-links-label">Links úteis</p>
 
         <ul class="footer-links">
-          <li><a href="https://ge.globo.com/" target="_blank">GE Globo</a></li>
-          <li><a href="https://cazetv.com.br/" target="_blank">CazéTV</a></li>
+
+          <li>
+            <a href="https://ge.globo.com/" target="_blank">
+              GE Globo
+            </a>
+          </li>
+
+          <li>
+            <a href="https://cazetv.com.br/" target="_blank">
+              CazéTV
+            </a>
+          </li>
+
         </ul>
+
       </div>
 
       <p class="footer-copy">
+
         &copy; 2026 Blog dos Caneludos.<br>
+
         Todos os direitos reservados.
+
       </p>
+
     </div>
+
   </footer>
 
+  <!-- MENU -->
   <script>
+
     const menuToggle = document.getElementById('menuToggle');
+
     const navDropdown = document.getElementById('navDropdown');
 
     menuToggle.addEventListener('click', (e) => {
+
       e.stopPropagation();
 
       const isOpen = navDropdown.classList.contains('open');
 
       navDropdown.classList.toggle('open', !isOpen);
+
       menuToggle.classList.toggle('active', !isOpen);
+
     });
 
     document.addEventListener('click', () => {
+
       navDropdown.classList.remove('open');
+
       menuToggle.classList.remove('active');
+
     });
 
     navDropdown.addEventListener('click', (e) => e.stopPropagation());
+
   </script>
 
 </body>
+
 </html>
+`;
+
+// ===================================
+// GERAR ARQUIVO HTML
+// ===================================
+
+fs.writeFileSync(
+    "flamengo-palmeiras.html",
+    html
+);
+
+console.log("HTML gerado com sucesso!");
